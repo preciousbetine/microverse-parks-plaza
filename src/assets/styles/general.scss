@@ -1,0 +1,30 @@
+$primary1: var(--primary-1);
+$primary2: var(--primary-2);
+$primary3: var(--primary-3);
+
+.loader {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 4px $primary3 solid;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    animation: 1s linear spin infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
