@@ -1,0 +1,145 @@
+@import 'general';
+
+.activities-page {
+  height: 100vh;
+  overflow-y: auto;
+  background: $primary3;
+}
+
+.header {
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    font-size: 16px;
+
+    &:first-child {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 25px;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+  }
+}
+
+.title {
+  height: 250px;
+  background-color: $primary1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+
+  .bg {
+    width: 100%;
+    word-break: break-all;
+    letter-spacing: 0;
+    text-align: justify;
+    position: absolute;
+    font-size: 50px;
+    font-weight: bolder;
+    bottom: 0;
+    left: 0;
+    color: rgba(85, 85, 85, 0.3);
+    z-index: 1;
+    display: none;
+  }
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 2;
+  }
+
+  h2 {
+    font-size: 100px;
+    line-height: 80px;
+    text-align: right;
+  }
+
+  p {
+    font-size: 30px;
+    text-align: right;
+    background: white;
+    color: rgb(85, 85, 85);
+    padding: 0 10px;
+    border-radius: 5px;
+  }
+}
+
+.activities {
+  color: white;
+
+  h3 {
+    position: sticky;
+    top: 0;
+    background: $primary3;
+    padding: 20px;
+    font-size: 20px;
+    width: 100%;
+    z-index: 30;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    li {
+      width: 50%;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: right;
+      position: relative;
+
+      .activity-bg {
+        color: rgba(85, 85, 85, 0.3);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 100px;
+      }
+
+      .activity-name {
+        z-index: 2;
+      }
+
+      &:nth-child(2n) {
+        background-color: $primary1;
+      }
+
+      &:nth-child(2n+1) {
+        background-color: $primary3;
+      }
+
+      &:nth-child(4n+1),
+      &:nth-child(4n+4) {
+        background-color: $primary1;
+      }
+
+      &:nth-child(4n+2),
+      &:nth-child(4n+3) {
+        background-color: $primary3;
+      }
+    }
+  }
+}
